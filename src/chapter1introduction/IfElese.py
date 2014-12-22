@@ -8,3 +8,43 @@
 # 				   warranty; without even the implied warranty of 
 # 				    merchantability or fitness for a particular purpose. 
 
+# O(1)
+def SimpleIfCondition(n):
+    i = n
+    if i == 0: 
+        i = i + 1
+    print i
+        
+# O(1)
+def IfElseCondition(n):
+    i = n
+    if i == 0: 
+        i = i + 1
+    elif i == 1:
+        i += 2    
+    print i  
+    
+# O(n)
+def IfElseCondition2(n):
+    i = n
+    if i > 0: 
+        for j in range(1,n):
+            print j
+    elif i < 0:
+        i += 2    
+    print i   
+    
+# O(n^2): Note that if testFunction is executed always
+def IfElseCondition3(n):
+    i = n
+    if testFunction(n) > 0: 
+        for j in range(1,n):
+            print j
+    elif i < 0:
+        i += 2    
+    print i   
+
+# O(n)    
+def testFunction(n):
+    for j in range(1,n):
+            print j           

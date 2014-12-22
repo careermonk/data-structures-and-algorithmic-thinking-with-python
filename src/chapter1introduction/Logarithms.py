@@ -18,8 +18,8 @@ def Logarithms(n):
 Logarithms(100)
 
 
-def Logarithms(n):
-    i = 1
+def Logarithms2(n):
+	i = 1
 	while i <= n: 
 		i = i * 2
 		print i	
