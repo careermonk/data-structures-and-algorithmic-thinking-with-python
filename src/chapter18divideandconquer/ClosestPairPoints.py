@@ -11,9 +11,7 @@
 
 import operator
 
-
 class Point():
-
     def __init__(self, x, y):
         """Init"""
         self.x = x
