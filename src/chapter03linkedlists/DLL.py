@@ -105,7 +105,7 @@ class DoubleLinkedList:
         if currentNode == None:
             return None
         i = 0
-        while i <= index:
+        while i < index and currentNode.getNext() is not None:
             currentNode = currentNode.getNext()
             if currentNode == None:
                 break
@@ -119,10 +119,10 @@ class DoubleLinkedList:
         elif index > 0:
             temp = self.getNode(index) 
             if temp == None or temp.getNext() == None:	
-                self.insertAtEnd(data)
+                self.insert(data)
             else:
-                newNode.setNext(self.getNext())
-                newNode.setPrev()
+                newNode.setNext(temp.getNext())
+                newNode.setPrev(temp)
                 temp.getNext().setPrev(newNode)
                 temp.setNext(newNode)
 		
@@ -155,38 +155,39 @@ class DoubleLinkedList:
             current = current.prev
         return True
 
-# Initializing list
-l = DoubleLinkedList()
+if __name__ == '__main__':
+    # Initializing list
+    l = DoubleLinkedList()
 
-# Inserting Values
-l.insert(1)
-l.insert(2)
-l.insert(3)
-l.insert(4)
+    # Inserting Values
+    l.insert(1)
+    l.insert(2)
+    l.insert(3)
+    l.insert(4)
 
-# Forward Print
-l.fwd_print()
+    # Forward Print
+    l.fwd_print()
 
-# Reverse Print
-l.rev_print()
+    # Reverse Print
+    l.rev_print()
 
-# Try to find 3 in the list
-if (l.find(3)):
-    print("Found")
-else :
-    print("Not found")
+    # Try to find 3 in the list
+    if (l.find(3)):
+        print("Found")
+    else :
+        print("Not found")
 
-# Delete 3 from the list
-l.delete(3)
+    # Delete 3 from the list
+    l.delete(3)
 
-# Forward Print
-l.fwd_print()
+    # Forward Print
+    l.fwd_print()
 
-# Reverse Print
-l.rev_print()
+    # Reverse Print
+    l.rev_print()
 
-# Now if we find 3, we will not get it in the list
-if (l.find(3)):
-    print("Found")
-else :
-    print("Not found")
+    # Now if we find 3, we will not get it in the list
+    if (l.find(3)):
+        print("Found")
+    else :
+        print("Not found")
