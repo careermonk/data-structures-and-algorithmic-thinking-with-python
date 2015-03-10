@@ -9,22 +9,22 @@
 # 				    merchantability or fitness for a particular purpose. 
 
 import random
-def QuickSort(A, first, last):
-    if first < last:
-        pivot = Partition(A, first, last)
-        QuickSort(A, first, pivot - 1)
-        QuickSort(A, pivot + 1, last)
+def QuickSort(A, low, high):
+    if low < high:
+        pivot = Partition(A, low, high)
+        QuickSort(A, low, pivot - 1)
+        QuickSort(A, pivot + 1, high)
  
-def Partition(A, first, last) :
-    pivot = first + random.randrange(last - first + 1)
-    swap(A, pivot, last)
-    for i in range(first, last):
-        if A[i] <= A[last]:
-            swap(A, i, first)
-            first += 1
+def Partition(A, low, high) :
+    pivot = low + random.randrange(high - low + 1)
+    swap(A, pivot, high)
+    for i in range(low, high):
+        if A[i] <= A[high]:
+            swap(A, i, low)
+            low += 1
  
-    swap(A, first, last)
-    return first
+    swap(A, low, high)
+    return low
  
 def swap(A, x, y):
     temp = A[x]
