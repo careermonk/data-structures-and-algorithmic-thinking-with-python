@@ -1,7 +1,7 @@
 DataStructure And Algorithmic Thinking With Python
 --------------------------------------------------
 
-Copyright (c) Dec 21, 2014 CareerMonk Publications and others.
+Copyright (c) Dec 21, 2014, 2015 CareerMonk Publications and others.
 
 E-Mail                : info@careermonk.com
 
