@@ -25,7 +25,7 @@ def findMaxBlock(A, r, c, L, H, size):
 		maxsize = size
 	# search in eight directions
 	direction = [[-1, 0], [-1, -1], [0, -1], [1, -1], [1, 0], [1, 1], [0, 1], [-1, 1]];
-	for i in range(0, 7):
+	for i in range(0, 8):
 		newi = r + direction[i][0]
 		newj = c + direction[i][1]
 		val = getval (A, newi, newj, L, H)
@@ -37,7 +37,6 @@ def findMaxBlock(A, r, c, L, H, size):
 
 def getMaxOnes(A, rmax, colmax):
 	global maxsize
-	global size
 	global cntarr
 	for i in range(0, rmax):
 		for j in range(0, colmax):
@@ -51,6 +50,6 @@ rmax = 5
 colmax = 5
 maxsize = 0
 size = 0
-cntarr = rmax * [colmax * [0]]
+cntarr = [[colmax * [0]] for i in range(rmax)]
 print ("Number of maximum 1s are ")
 print getMaxOnes(zarr, rmax, colmax)
