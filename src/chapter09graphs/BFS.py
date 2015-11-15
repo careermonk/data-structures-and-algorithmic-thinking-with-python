@@ -171,13 +171,6 @@ class Graph:
 		    wid = w.getVertexID()
 		    edges.append((vid, wid, v.getWeight(w)))
 	return edges
-
-def dfs(G, u, visited):
-    visited[u] = True  # mark the visited node 
-    print "traversal: " + u.getVertexID()
-    for neighbourNodes in u.getConnections():  # take a neighbouring node 
-        if neighbourNodes not in visited:  # condition to check whether the neighbour node is already visited
-            dfs(G, neighbourNodes, visited)  # recursively traverse the neighbouring node 
  
 def BFSTraversal(G, s):  
 	start = G.getVertex(s)
