@@ -15,10 +15,10 @@ class BinaryTree:
 		self.left = None  # left child
 		self.right = None  # right child
 	# set data
-	def setData(self, data):
+	def set_data(self, data):
 		self.data = data
 	# get data   
-	def getData(self):
+	def get_data(self):
 		return self.data	
 	# get left child of a node
 	def getLeft(self):
@@ -139,7 +139,7 @@ root1.insertLeft(1)
 root1.insertLeft(10)
 root1.insertLeft(1100)
 root1.insertRight(5)
-root1.getRight().setData(2)
+root1.getRight().set_data(2)
 postorderIterative(root1)
 
 root2 = BinaryTree(99)
@@ -147,6 +147,6 @@ root2.insertLeft(9)
 root2.insertLeft(910)
 root2.insertLeft(9900)
 root2.insertRight(8)
-root2.getRight().setData(2)
+root2.getRight().set_data(2)
 postorderIterative(root2)
 print "Isomorphic:", isIsomorphic(root1, root2)

@@ -15,10 +15,10 @@ class BinaryTree:
 		self.left = None  # left child
 		self.right = None  # right child
 	# set data
-	def setData(self, data):
+	def set_data(self, data):
 		self.data = data
 	# get data   
-	def getData(self):
+	def get_data(self):
 		return self.data	
 	# get left child of a node
 	def getLeft(self):
@@ -136,7 +136,7 @@ def levelOrder(root, result):
  
     while not q.empty():
       n = q.get()  # dequeue FIFO
-      result.append(node.getData())
+      result.append(node.get_data())
       if n.left is not None:
         q.put(n.left)
  
@@ -144,13 +144,13 @@ def levelOrder(root, result):
         q.put(n.right)	
 	
 root = BinaryTree(11)
-print(root.getData())
+print(root.get_data())
 
 root.insertLeft(1)
 root.insertLeft(10)
 root.insertLeft(1100)
-print(root.getLeft().getData())
+print(root.getLeft().get_data())
 root.insertRight(5)
-print(root.getRight().getData())
-root.getRight().setData(2)
-print(root.getRight().getData())	
+print(root.getRight().get_data())
+root.getRight().set_data(2)
+print(root.getRight().get_data())	

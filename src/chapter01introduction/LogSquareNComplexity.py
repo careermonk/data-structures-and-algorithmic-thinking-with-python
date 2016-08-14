@@ -10,7 +10,7 @@
 
 
 count = 0
-def Logarithms(n):
+def logarithms(n):
 	i = 1
 	global count
 	while i <= n: 
@@ -21,4 +21,4 @@ def Logarithms(n):
 		i = i * 2
 	return count
 	
-print(Logarithms(10))
+print(logarithms(10))

@@ -11,8 +11,8 @@
 def deleteLinkedListDuplicates(self):
 	current = self.head;
 	while current != None and current.next != None:
-	    if current.getData() == current.getNext().getData():
-		current.setNext(current.getNext().getNext())
+	    if current.get_data() == current.get_next().get_data():
+		current.set_next(current.get_next().get_next())
 	    else:
-		current = current.getNext()
+		current = current.get_next()
 	return head

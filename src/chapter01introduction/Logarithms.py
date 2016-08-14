@@ -9,19 +9,19 @@
 # 				    merchantability or fitness for a particular purpose. 
 
 
-def Logarithms(n):
+def logarithms(n):
 	i = n
 	while i >= 1: 
 		i = i // 2
 		print i	
 
-Logarithms(100)
+logarithms(100)
 
 
-def Logarithms2(n):
+def logarithms2(n):
 	i = 1
 	while i <= n: 
 		i = i * 2
 		print i	
 
-Logarithms(100)
+logarithms(100)

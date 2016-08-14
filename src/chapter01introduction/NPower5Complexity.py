@@ -9,7 +9,7 @@
 # 				    merchantability or fitness for a particular purpose. 
 
 
-def Function(n):
+def function(n):
     for i in range(1, n):
 		j = i
 		while j < i * i:
@@ -18,4 +18,4 @@ def Function(n):
 				for k in range(0, j):
           			print(" * ")
 
-Function(10)
+function(10)

@@ -11,11 +11,11 @@
 def rangePrinter(root, K1, K2): 
 	if not root: 
 		return 
-	if K1 <= root.getData() <= K2: 
-		print(root.getData())
-	if root.getData() < K1: 
+	if K1 <= root.get_data() <= K2: 
+		print(root.get_data())
+	if root.get_data() < K1: 
 		return rangePrinter(root.getRight()) 
-	if root.getData() > K2: 
+	if root.get_data() > K2: 
 		return rangePrinter(root.getLeft())
 
 
@@ -30,11 +30,11 @@ def rangePrinter(root):
 
 	while not q.empty():
 		temp = q.get()  # dequeue FIFO
-		if K1 <= root.getData() <= K2: 
-			print(root.getData())
-		if temp.getLeft() is not None and temp.getData() >= K1:
+		if K1 <= root.get_data() <= K2: 
+			print(root.get_data())
+		if temp.getLeft() is not None and temp.get_data() >= K1:
 			q.put(temp.getLeft())
-		if temp.getRight() is not None and temp.getData() <= K2:
+		if temp.getRight() is not None and temp.get_data() <= K2:
 			q.put(temp.getRight())	
 
 	

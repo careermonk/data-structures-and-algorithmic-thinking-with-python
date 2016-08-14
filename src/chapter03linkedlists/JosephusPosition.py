@@ -11,22 +11,22 @@
 def getJosephusPosition(n, m):
     class Node:
         def __init__(self, data=None, next=None):
-            self.setData(data)
-            self.setNext(next)
+            self.set_data(data)
+            self.set_next(next)
         # method for setting the data field of the node    
-        def setData(self, data):
+        def set_data(self, data):
             self.data = data
         # method for getting the data field of the node   
-        def getData(self):
+        def get_data(self):
             return self.data
           # method for setting the next field of the node
-        def setNext(self, next):
+        def set_next(self, next):
             self.next = next
            # method for getting the next field of the node    
-        def getNext(self):
+        def get_next(self):
             return self.next
         # returns true if the node points to another node
-        def hasNext(self):
+        def has_next(self):
                 return self.next != None
     answer = []
 
@@ -35,24 +35,24 @@ def getJosephusPosition(n, m):
     prev = head
     for n in range(1, n):
         currentNode = Node(n)
-        prev.setNext(currentNode)
+        prev.set_next(currentNode)
         prev = currentNode
-    prev.setNext(head)  # set the last node to point to the front (circular list)
+    prev.set_next(head)  # set the last node to point to the front (circular list)
 
     # extract items from linked list in proper order
     currentNode = head
     counter = 0
-    while currentNode.getNext() != currentNode:
+    while currentNode.get_next() != currentNode:
         counter += 1
         if counter == m:
             counter = 0
-            prev.setNext(currentNode.next)
-            answer.append(currentNode.getData())
+            prev.set_next(currentNode.next)
+            answer.append(currentNode.get_data())
         else:
             prev = currentNode
-        currentNode = currentNode.getNext()
+        currentNode = currentNode.get_next()
     
-    answer.append(currentNode.getData())
+    answer.append(currentNode.get_data())
     return answer
         
 

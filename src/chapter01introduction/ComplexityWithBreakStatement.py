@@ -9,15 +9,17 @@
 # 				    merchantability or fitness for a particular purpose. 
 
 
-def Function(n):
+def function(n):
 	count = 0
 	for i in range(n / 2, n):  # Outer loop execute n/2 times
 		j = 1
+		count = count + 1
 		while j + n / 2 <= n:  # Middle loop has break
 			break
 			j = j * 2
+			count = count + 1
 
 	print (count)
 
-Function(20)
+function(20)
 

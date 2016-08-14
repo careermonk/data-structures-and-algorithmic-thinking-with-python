@@ -15,10 +15,10 @@ class BinaryTree:
         self.left = None  # left child
         self.right = None  # right child
     # set data
-    def setData(self, data):
+    def set_data(self, data):
         self.data = data
     # get data   
-    def getData(self):
+    def get_data(self):
         return self.data	
     # get left child of a node
     def getLeft(self):
@@ -31,11 +31,11 @@ def IsBST(root):
 	if root == None:
                   return 1
 	# false if left is > than root 
-	if root.getLeft() != None and root.getLeft().getData() > root.getData():
+	if root.getLeft() != None and root.getLeft().get_data() > root.get_data():
                   return 0
 
 	# false if right is < than root 
-	if root.getRight() != None and root.getRight().getData() < root.getData():
+	if root.getRight() != None and root.getRight().get_data() < root.get_data():
                   return 0
 
 	# false if, recursively, the left or right is not a BST 
@@ -48,10 +48,10 @@ def IsBST(root):
 def IsBST2(root, min, max):
 	if root == None:
 	    return 1
-	if root.getData() <= min or root.getData() >= max:
+	if root.get_data() <= min or root.get_data() >= max:
 	    return 0
-	result = IsBST2(root.getLeft(), min, root.getData())
-	result = result and IsBST2(root.getRight(), root.getData(), max)
+	result = IsBST2(root.getLeft(), min, root.get_data())
+	result = result and IsBST2(root.getRight(), root.get_data(), max)
 	return result
 
 # Returns true if a binary tree is a binary search tree 
@@ -60,11 +60,11 @@ def IsBST3(root):
                   return 1
 
 	# false if the max of the left is > than root 
-	if(root.getLeft() != None and FindMax(root.getLeft()) > root.getData())
+	if(root.getLeft() != None and FindMax(root.getLeft()) > root.get_data())
                   return 0
 
 	# false if the min of the right is <= than root 
-	if(root.getRight() != None and FindMin(root.getRight()) < root.getData())
+	if(root.getRight() != None and FindMin(root.getRight()) < root.get_data())
                   return 0
 
 	# false if, recursively, the left or right is not a BST 
@@ -79,7 +79,7 @@ def isBST4(root, previousValue=[NEG_INFINITY]):
 		return 1   
 	if not isBST4(root.getLeft(), previousValue): 
 		return False   
-	if root.getData() < lastNode[0]: 
+	if root.get_data() < lastNode[0]: 
 		return 0   
-	previousValue = root.getData()   
+	previousValue = root.get_data()   
 	return isBST4(root.getRight(), previousValue)

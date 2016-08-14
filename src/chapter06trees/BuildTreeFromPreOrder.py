@@ -15,10 +15,10 @@ class BinaryTree:
 		self.left = None  # left child
 		self.right = None  # right child
 	# set data
-	def setData(self, data):
+	def set_data(self, data):
 		self.data = data
 	# get data   
-	def getData(self):
+	def get_data(self):
 		return self.data	
 	# get left child of a node
 	def getLeft(self):

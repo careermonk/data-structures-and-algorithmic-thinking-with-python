@@ -17,16 +17,16 @@ class Node:
         self.data = data
         self.next = None
          
-    def setData(self, data):
+    def set_data(self, data):
         self.data = data
      
-    def getData(self):
+    def get_data(self):
         return self.data
      
-    def setNext(self, next):
+    def set_next(self, next):
         self.next = next
          
-    def getNext(self):
+    def get_next(self):
         return self.next
      
      
@@ -39,7 +39,7 @@ class LinkedList:
      
     def insertAtBeg(self, item):
         node = Node(item)
-        node.setNext(self.head)
+        node.set_next(self.head)
         self.head = node
          
     def length(self):
@@ -47,28 +47,28 @@ class LinkedList:
         count = 0
         while current != None:
             count += 1
-            current = current.getNext()
+            current = current.get_next()
         return count
      
     def search(self, item):
         found = False
         current = self.head
         while current != None and not found:
-            if current.getData() == item:
+            if current.get_data() == item:
                 found = True
             else:
-                current = current.getNext()
+                current = current.get_next()
                  
         return found
      
     def insertAtEnd(self, item):
         current = self.head
          
-        while current.getNext() != None:
-            current = current.getNext()
+        while current.get_next() != None:
+            current = current.get_next()
              
         node = Node(item)
-        current.setNext(node)
+        current.set_next(node)
          
     def insertBeforeItem(self, inItem, item):
         current = self.head
@@ -77,16 +77,16 @@ class LinkedList:
         stop = False
          
         while current != None and not found and not stop:
-            if current.getData() == item:
+            if current.get_data() == item:
                 found = True
                 stop = True
             else:
                 previous = current
-                current = current.getNext()
+                current = current.get_next()
                  
         node = Node(inItem)
-        previous.setNext(node)
-        node.setNext(current)
+        previous.set_next(node)
+        node.set_next(current)
          
          
     def insertAfterItem(self, inItem, item):
@@ -96,16 +96,16 @@ class LinkedList:
         stop = False
          
         while current != None and not found and not stop:
-            if current.getData() == item:
+            if current.get_data() == item:
                 found = True
                 stop = True
             else:
 #                previous = current
-                current = current.getNext()
-        successor = current.getNext()       
+                current = current.get_next()
+        successor = current.get_next()       
         node = Node(inItem)
-        current.setNext(node)
-        node.setNext(successor)
+        current.set_next(node)
+        node.set_next(successor)
          
              
          
@@ -115,8 +115,8 @@ class LinkedList:
         current = self.head
          
         while current != None:
-            print current.getData()
-            current = current.getNext()
+            print current.get_data()
+            current = current.get_next()
              
              
     def remove(self, item):
@@ -124,15 +124,15 @@ class LinkedList:
         current = self.head
         previous = None
          
-        while current.getNext() != None and not found:
-            if current.getData() == item:
-                print current.getData()
-                print previous.getData()
+        while current.get_next() != None and not found:
+            if current.get_data() == item:
+                print current.get_data()
+                print previous.get_data()
                 found = True
-                previous.setNext(current.next)
+                previous.set_next(current.next)
             else:
                 previous = current
-                current = current.getNext()
+                current = current.get_next()
                  
     def induceCycle(self, end, start):
         current = self.head
@@ -144,33 +144,33 @@ class LinkedList:
             count += 1
             if count == end:
                 endnodeFound = True
-                endnodePointer = current.getNext()
+                endnodePointer = current.get_next()
                  
             else:
                 if count == start:
                     stop = True
                 else:
-                    current = current.getNext()
+                    current = current.get_next()
                      
-        current.setNext(endnodePointer)
+        current.set_next(endnodePointer)
          
     def detectCycle(self):
         hare = self.head
         tortoise = self.head
          
         while (hare and tortoise):
-            hare = hare.getNext()
+            hare = hare.get_next()
             if (hare == tortoise):
                 return True
              
             if hare == None:
                 return False
              
-            hare = hare.getNext()
+            hare = hare.get_next()
             if (hare == tortoise):
                 return True
              
-            tortoise = tortoise.getNext()
+            tortoise = tortoise.get_next()
     
 	def detectCycleStart(self) :
 	    if None == self.head or None == self.head.next:

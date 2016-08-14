@@ -9,7 +9,7 @@
 # 				    merchantability or fitness for a particular purpose. 
 
 
-def Function(n):
+def function(n):
 	count = 0
 	if n <= 0:
 		return
@@ -20,7 +20,7 @@ def Function(n):
 			count = count + 1
 	print (count)
 
-Function(20)
+function(20)
 
 def Function2(n):
 	for i in range(1, n):
@@ -32,11 +32,11 @@ def Function2(n):
 Function2(20)
 
 import math
-def Function(n):
+def function(n):
 	for i in range(1, n / 3):
 		j = 1
 		while j <= n:
 			j = j + 4
 			print("*")
 
-Function(20)
+function(20)

@@ -20,10 +20,10 @@ class BSTNode(object):
         self.parent = None
 	
     # set data
-    def setData(self, data):
+    def set_data(self, data):
         self.data = data
     # get data   
-    def getData(self):
+    def get_data(self):
         return self.data	
     # get left child of a node
     def getLeft(self):
@@ -207,7 +207,7 @@ def findMaxIterative(root):
 		return None
 	while currentNode.getRight() != None:
 		currentNode = currentNode.getRight()
-	return currentNode.getData()
+	return currentNode.get_data()
 
 	
 root = BSTNode(11)

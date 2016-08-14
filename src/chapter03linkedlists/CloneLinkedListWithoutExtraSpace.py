@@ -18,7 +18,7 @@ class RandomListNode:
 class Solution:
     # @param head, a RandomListNode
     # @return a RandomListNode
-    def copyRandomList(self, head):
+    def copy_random_list(self, head):
         if None == head:
             return None
         save_list = [ ]

@@ -12,9 +12,9 @@
 def Find(self, root, data):
 	currentNode = root
 	while currentNode:
-	    if data == currentNode.getData():
+	    if data == currentNode.get_data():
 		return currentNode
-	    if key < currentNode.getData():
+	    if key < currentNode.get_data():
 		currentNode = currentNode.getLeft()
 	    else:
 		currentNode = currentNode.getRight()
