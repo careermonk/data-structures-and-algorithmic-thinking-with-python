@@ -10,7 +10,7 @@
 
 
 
-def countingNumberofOnesin1toN(n):
+def counting_number_of_ones_in_1_to_N(n):
     count = 0
     for i in range(1, n+1):
         j = i;
@@ -20,10 +20,10 @@ def countingNumberofOnesin1toN(n):
     print count
 
 n = 2
-countingNumberofOnesin1toN(n)
+counting_number_of_ones_in_1_to_N(n)
 n = 5
-countingNumberofOnesin1toN(n)
+counting_number_of_ones_in_1_to_N(n)
 n = 7
-countingNumberofOnesin1toN(n)
+counting_number_of_ones_in_1_to_N(n)
 n = 8
-countingNumberofOnesin1toN(n)
+counting_number_of_ones_in_1_to_N(n)

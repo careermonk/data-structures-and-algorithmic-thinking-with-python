@@ -11,16 +11,16 @@
 def number_of_ones1(n):
 	count = 0
 	while(n):
-	     count += n & 1
-	     n >>= 1
+        count += n & 1
+	    n >>= 1
 	print count
 
 def number_of_ones2(n):
 	count = 0
 	while(n):
-	     if(n % 2 == 1):
-		  count += 1
-	     n = n / 2
+	    if(n % 2 == 1):
+		  	count += 1
+		  	n = n / 2
 	print count
 	
 
