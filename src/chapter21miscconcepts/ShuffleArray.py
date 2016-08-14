@@ -9,7 +9,7 @@
 # 				    merchantability or fitness for a particular purpose. 
 
 import random
-def shuffleArray(A):
+def shuffle_array(A):
 	n = len(A)
 	i = n - 1
 	while i > 0:
@@ -18,5 +18,5 @@ def shuffleArray(A):
 		i -= 1
 
 A = [1, 3, 5, 6, 2, 4, 6, 8]
-shuffleArray(A)
+shuffle_array(A)
 print A

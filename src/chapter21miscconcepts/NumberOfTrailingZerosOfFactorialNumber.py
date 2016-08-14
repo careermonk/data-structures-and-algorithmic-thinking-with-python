@@ -8,7 +8,7 @@
 # 				   warranty; without even the implied warranty of 
 # 				    merchantability or fitness for a particular purpose. 
 
-def numberOfTrailingZerosOfFactorialNumber(n):
+def number_of_trailing_zeros_of_factorial_number(n):
 	count = 0
 	if(n < 0):  
 		return -1
@@ -18,4 +18,4 @@ def numberOfTrailingZerosOfFactorialNumber(n):
 		i *= 5
 	return count
 
-print numberOfTrailingZerosOfFactorialNumber(100)
+print number_of_trailing_zeros_of_factorial_number(100)

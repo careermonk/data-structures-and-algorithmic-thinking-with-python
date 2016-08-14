@@ -8,7 +8,7 @@
 # 				   warranty; without even the implied warranty of 
 # 				    merchantability or fitness for a particular purpose. 
 
-def matrixFind(matrix, value):
+def matrix_find(matrix, value):
     m = len(matrix)
     if m == 0:
         return 0

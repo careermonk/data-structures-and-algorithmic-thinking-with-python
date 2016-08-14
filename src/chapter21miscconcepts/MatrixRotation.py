@@ -9,13 +9,13 @@
 #                     merchantability or fitness for a particular purpose. 
  
 #Printing the matrix
-def printMatrix(matrix):
+def print_matrix(matrix):
     for row in matrix:
         print row
     print
  
 #rotate the matrix by 90 degrees (clockwise) in place
-def rotate90Degrees(matrix):
+def rotate_90_degrees(matrix):
     layers = len(matrix) / 2
     length = len(matrix) - 1
  
@@ -38,7 +38,7 @@ matrix =[
             [13, 14, 15, 16 ]  
         ]
 print "Input matrix:\n"
-printMatrix(matrix)
-rotate90Degrees(matrix)
+print_matrix(matrix)
+rotate_90_degrees(matrix)
 print "Rotated matrix by 90 degrees:\n"
-printMatrix(matrix)
+print_matrix(matrix)

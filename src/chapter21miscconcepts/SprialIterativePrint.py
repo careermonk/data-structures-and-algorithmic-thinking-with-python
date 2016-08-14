@@ -8,7 +8,7 @@
 # 				   warranty; without even the implied warranty of 
 # 				    merchantability or fitness for a particular purpose. 
 
-def spiralIterative(n):
+def spiral_iterative(n):
     dx, dy = 1, 0  # Starting increments
     x, y = 0, 0  # Starting location
     matrix = [[None] * n for j in range(n)]
@@ -22,11 +22,11 @@ def spiralIterative(n):
             x, y = x + dx, y + dy
     return matrix
  
-def printSpiral(matrix):
+def print_spiral(matrix):
     n = range(len(matrix))
     for y in n:
         for x in n:
             print "%2i" % matrix[x][y],
         print
  
- printSpiral(spiralIterative(5))
+print_spiral(spiral_iterative(5))
