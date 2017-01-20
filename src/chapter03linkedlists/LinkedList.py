@@ -158,6 +158,10 @@ class LinkedList(object):
  
         if pos > self.length or pos < 0:
             print "The position does not exist. Please enter a valid position"
+        # to deletle the first position of the linkedlist
+        elif pos == 1:
+            self.delete_beg()
+            self.length -= 1
         else:        
             while currentnode.next != None or count < pos:
                 count = count + 1
