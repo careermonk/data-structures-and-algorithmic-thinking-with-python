@@ -10,27 +10,27 @@
 
 def reverseKBlock(self, head, k):
         temp = Node(0);
-        temp.setNext(head)
+        temp.set_next(head)
         previous = temp
         while True:
-            begin = previous.getNext()
+            begin = previous.get_next()
             end = previous
             for i in range(0, k):
-                end = end.getNext()
+                end = end.get_next()
                 if end == None:
-                    return temp.getNext()
-            nextBlock = end.getNext()
+                    return temp.get_next()
+            nextBlock = end.get_next()
             self.reverseList(begin, end)
-            previous.setNext(end)
-            begin.setNext(nextBlock)
+            previous.set_next(end)
+            begin.set_next(nextBlock)
             previous = begin
         
 def reverseList(self, start, end):
 	alreadyReversed = start
 	actual = start
-	nextNode = start.getNext()
+	nextNode = start.get_next()
 	while actual != end:
 	    actual = nextNode
-	    nextNode = nextNode.getNext()
-	    actual.setNext(alreadyReversed)
+	    nextNode = nextNode.get_next()
+	    actual.set_next(alreadyReversed)
 	    alreadyReversed = actual

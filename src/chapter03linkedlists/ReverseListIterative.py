@@ -13,16 +13,16 @@ class Node:
         self.data = data
         self.next = None
          
-    def setData(self, data):
+    def set_data(self, data):
         self.data = data
      
-    def getData(self):
+    def get_data(self):
         return self.data
      
-    def setNext(self, next):
+    def set_next(self, next):
         self.next = next
          
-    def getNext(self):
+    def get_next(self):
         return self.next
      
      
@@ -38,8 +38,8 @@ class LinkedList:
 	current = self.head
 	
 	while(current is not None):
-		nextNode = current.getNext()
-		current.setNext(last) 
+		nextNode = current.get_next()
+		current.set_next(last) 
 		last = current
 		current = nextNode
 	
@@ -49,22 +49,22 @@ class LinkedList:
         current = self.head
         if  current == None:
             node = Node(item)
-            node.setNext(None)
+            node.set_next(None)
             self.head = node
             return
             
-        while current.getNext() != None:
-            current = current.getNext()
+        while current.get_next() != None:
+            current = current.get_next()
              
         node = Node(item)
-        current.setNext(node)
+        current.set_next(node)
          
     def printList(self):
         current = self.head
          
         while current != None:
-            print current.getData()
-            current = current.getNext()
+            print current.get_data()
+            current = current.get_next()
              
 	
 

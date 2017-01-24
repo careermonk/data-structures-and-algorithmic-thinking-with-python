@@ -9,14 +9,14 @@
 # 				    merchantability or fitness for a particular purpose. 
 
 # O(1)
-def SimpleIfCondition(n):
+def simple_if_condition(n):
     i = n
     if i == 0: 
         i = i + 1
     print i
         
 # O(1)
-def IfElseCondition(n):
+def if_else_condition(n):
     i = n
     if i == 0: 
         i = i + 1
@@ -25,7 +25,7 @@ def IfElseCondition(n):
     print i  
     
 # O(n)
-def IfElseCondition2(n):
+def if_else_condition2(n):
     i = n
     if i > 0: 
         for j in range(1,n):
@@ -35,9 +35,9 @@ def IfElseCondition2(n):
     print i   
     
 # O(n^2): Note that if testFunction is executed always
-def IfElseCondition3(n):
+def if_else_condition3(n):
     i = n
-    if testFunction(n) > 0: 
+    if test_function(n) > 0: 
         for j in range(1,n):
             print j
     elif i < 0:
@@ -45,6 +45,6 @@ def IfElseCondition3(n):
     print i   
 
 # O(n)    
-def testFunction(n):
+def test_function(n):
     for j in range(1,n):
             print j           

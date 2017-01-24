@@ -10,58 +10,58 @@
 
 class Node:
 	def __init__(self, data):
-		self.setData(data)
-		self.setNext(None)
-		self.setRand(None)
+		self.set_data(data)
+		self.set_next(None)
+		self.set_rand(None)
 	# method for setting the data field of the node    
-	def setData(self, data):
+	def set_data(self, data):
 		self.data = data
 	# method for getting the data field of the node   
-	def getData(self):
+	def get_data(self):
 		return self.data
 	# method for setting the next field of the node
-	def setNext(self, next):
-		self.next = next
+	def set_next(self, nextV):
+		self.next = nextV
 	# method for setting the next field of the node
-	def setRand(self, rand):
+	def set_rand(self, rand):
 		self.rand = rand	
 	# method for getting the next field of the node
-	def getRand(self):
+	def get_rand(self):
 		return self.rand	
 	# method for getting the next field of the node    
-	def getNext(self):
+	def get_next(self):
 		return self.next
 	# returns true if the node points to another node
-	def hasNext(self):
+	def has_next(self):
 	    return self.next != None
 	    
-	def cloneLinkedList(old):
+	def clone_linked_list(old):
 	    if not old:
 		return
 
 	    old_copy = old
-	    root = Node(old.getData())
+	    root = Node(old.get_data())
 	    prev = root
 	    temp = None
 
-	    old = old.getNext()
+	    old = old.get_next()
 
 	    mapping = {}
 	    
 	    while old:
-		temp = Node(old.getData())
+		temp = Node(old.get_data())
 		mapping[old] = temp
 		
-		prev.setNext(temp)
+		prev.set_next(temp)
 		prev = temp
-		old = old.getNext()
+		old = old.get_next()
 
 	    old = old_copy
 	    temp = root
 
 	    while old:
-		temp.setRand(mapping[old.rand])
-		temp = temp.getNext()
-		old = old.getNext()
+		temp.set_rand(mapping[old.rand])
+		temp = temp.get_next()
+		old = old.get_next()
 
 	    return root

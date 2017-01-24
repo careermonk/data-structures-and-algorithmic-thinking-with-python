@@ -16,16 +16,16 @@ class Node:
 		self.last = None
 		self.next = next
 	# method for setting the data field of the node    
-	def setData(self, data):
+	def set_data(self, data):
 		self.data = data
 	# method for getting the data field of the node   
-	def getData(self):
+	def get_data(self):
 		return self.data
 	# method for setting the next field of the node
-	def setNext(self, next):
+	def set_next(self, next):
 		self.next = next
 	# method for getting the next field of the node    
-	def getNext(self):
+	def get_next(self):
 		return self.next
 	# method for setting the last field of the node
 	def setLast(self, last):
@@ -34,7 +34,7 @@ class Node:
 	def getLast(self):
 		return self.last	
 	# returns true if the node points to another node
-	def hasNext(self):
+	def has_next(self):
 		return self.next != None
 
 class Queue(object):
@@ -56,19 +56,19 @@ class Queue(object):
 		if self.rear is None:
 			print "Sorry, the queue is empty!"
 			raise IndexError
-		return self.rear.getData()
+		return self.rear.get_data()
 
 	def queueFront(self):
 		if self.front is None:
 			print "Sorry, the queue is empty!"
 			raise IndexError
-		return self.front.getData()
+		return self.front.get_data()
 
 	def deQueue(self):
 		if self.rear is None:
 			print "Sorry, the queue is empty!"
 			raise IndexError
-		result = self.rear.getData()
+		result = self.rear.get_data()
 		self.rear = self.rear.last
 		self.size -= 1
 		return result
@@ -90,10 +90,10 @@ class BSTNode(object):
         self.right = None
 	
     # set data
-    def setData(self, data):
+    def set_data(self, data):
         self.data = data
     # get data   
-    def getData(self):
+    def get_data(self):
         return self.data	
     # get left child of a node
     def getLeft(self):

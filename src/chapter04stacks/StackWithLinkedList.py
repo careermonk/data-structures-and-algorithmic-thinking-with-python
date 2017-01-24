@@ -15,19 +15,19 @@ class Node:
         self.data = None
         self.next = None
         # method for setting the data field of the node    
-    def setData(self, data):
+    def set_data(self, data):
         self.data = data
     # method for getting the data field of the node   
-    def getData(self):
+    def get_data(self):
         return self.data
       # method for setting the next field of the node
-    def setNext(self, next):
+    def set_next(self, next):
         self.next = next
        # method for getting the next field of the node    
-    def getNext(self):
+    def get_next(self):
         return self.next
     # returns true if the node points to another node
-    def hasNext(self):
+    def has_next(self):
             return self.next != None
 	    
 class Stack(object):
@@ -39,21 +39,21 @@ class Stack(object):
 
     def push(self, data):
         temp = Node()
-        temp.setData(data)
-        temp.setNext(self.head)
+        temp.set_data(data)
+        temp.set_next(self.head)
         self.head = temp
 
     def pop(self):
         if self.head is None:
             raise IndexError
-        temp = self.head.getData()
-        self.head = self.head.getNext()
+        temp = self.head.get_data()
+        self.head = self.head.get_next()
         return temp
 	
     def peek(self):
         if self.head is None:
             raise IndexError
-        return self.head.getData()
+        return self.head.get_data()
 
 
 our_list = ["first", "second", "third", "fourth"]

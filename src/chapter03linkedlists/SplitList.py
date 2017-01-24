@@ -17,31 +17,31 @@ class Node:
         self.data = None
         self.next = None
          # method for setting the data field of the node    
-    def setData(self, data):
+    def set_data(self, data):
         self.data = data
     # method for getting the data field of the node   
-    def getData(self):
+    def get_data(self):
         return self.data
       # method for setting the next field of the node
-    def setNext(self, next):
+    def set_next(self, next):
         self.next = next
        # method for getting the next field of the node    
-    def getNext(self):
+    def get_next(self):
         return self.next
     # returns true if the node points to another node
-    def hasNext(self):
+    def has_next(self):
             return self.next != None
 	    
 def _splitList(head):
     fast = head
     slow = head
     while fast and fast.next:
-        slow = slow.getNext()
-        fast = fast.getNext()
-        fast = fast.getNext()
+        slow = slow.get_next()
+        fast = fast.get_next()
+        fast = fast.get_next()
 
-    middle = slow.getNext()
-    slow.setNext(None)
+    middle = slow.get_next()
+    slow.set_next(None)
 
     return head, middle
 
@@ -53,8 +53,8 @@ def _reverseList(head):
   currentNode = head
 
   while currentNode:
-    nextNode = currentNode.getNext()
-    currentNode.setNext(last)
+    nextNode = currentNode.get_next()
+    currentNode.set_next(last)
     last = currentNode
     currentNode = nextNode
 
@@ -64,11 +64,11 @@ def _reverseList(head):
 def _mergeLists(a, b):
     tail = a
     head = a
-    a = a.getNext()
+    a = a.get_next()
     while b:
-        tail.setNext(b)
-        tail = tail.getNext()
-        b = b.getNext()
+        tail.set_next(b)
+        tail = tail.get_next()
+        b = b.get_next()
         if a:
             a, b = b, a
     return head

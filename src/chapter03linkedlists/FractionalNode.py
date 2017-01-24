@@ -13,16 +13,16 @@ class Node:
         self.data = data
         self.next = None
          
-    def setData(self, data):
+    def set_data(self, data):
         self.data = data
      
-    def getData(self):
+    def get_data(self):
         return self.data
      
-    def setNext(self, next):
+    def set_next(self, next):
         self.next = next
          
-    def getNext(self):
+    def get_next(self):
         return self.next
      
      
@@ -42,25 +42,25 @@ class LinkedList:
 			if fractionalNode == None:
 				fractionalNode = self.head
 			else:
-				fractionalNode = fractionalNode.getNext()		
+				fractionalNode = fractionalNode.get_next()		
 		i = i + 1
-		currentNode = currentNode.getNext()
+		currentNode = currentNode.get_next()
 		
-	print (fractionalNode.getData())
+	print (fractionalNode.get_data())
 			
     def insertAtEnd(self, item):
         current = self.head
         if  current == None:
             node = Node(item)
-            node.setNext(None)
+            node.set_next(None)
             self.head = node
             return
             
-        while current.getNext() != None:
-            current = current.getNext()
+        while current.get_next() != None:
+            current = current.get_next()
              
         node = Node(item)
-        current.setNext(node)
+        current.set_next(node)
 
 if __name__ == "__main__":
     linkedlst = LinkedList()

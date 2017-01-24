@@ -11,13 +11,13 @@
 
 import math
 count = 0
-def Function(n):
+def function(n):
 	global count
 	if n <= 2:
 		return 1
 	else: 
-		Function(round(math.sqrt(n)))
+		function(round(math.sqrt(n)))
 		count = count + 1
 		return count
 
-print(Function(200))
+print(function(200))

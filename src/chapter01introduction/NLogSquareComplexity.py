@@ -9,7 +9,7 @@
 # 				    merchantability or fitness for a particular purpose. 
 
 
-def Function(n):
+def function(n):
 	count = 0
 	for i in range(n / 2, n):  # Outer loop execute n/2 times
 		j = 1
@@ -22,4 +22,4 @@ def Function(n):
 
 	print (count)
 
-Function(20)
+function(20)

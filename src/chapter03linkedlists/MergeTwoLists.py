@@ -12,15 +12,15 @@ def mergeTwoLists(self, list1, list2):
 	temp = Node()
 	pointer = temp
 	while list1 != None and list2 != None:
-	    if list1.getData() < list2.getData():
-		pointer.setNext(list1)
-		list1 = list1.getNext()
+	    if list1.get_data() < list2.get_data():
+		pointer.set_next(list1)
+		list1 = list1.get_next()
 	    else:
-		pointer.setNext(list2)
-		list2 = list2.getNext()
-	    pointer = pointer.getNext()
+		pointer.set_next(list2)
+		list2 = list2.get_next()
+	    pointer = pointer.get_next()
 	if list1 == None:
-	    pointer.setNext(list2)
+	    pointer.set_next(list2)
 	else:
-	    pointer.setNext(list1)
-	return temp.getNext()
+	    pointer.set_next(list1)
+	return temp.get_next()

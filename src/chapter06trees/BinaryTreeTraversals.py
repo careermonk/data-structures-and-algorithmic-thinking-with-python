@@ -15,10 +15,10 @@ class BinaryTree:
         self.left = None  # left child
         self.right = None  # right child
     # set data
-    def setData(self, data):
+    def set_data(self, data):
         self.data = data
     # get data   
-    def getData(self):
+    def get_data(self):
         return self.data	
     # get left child of a node
     def getLeft(self):
@@ -58,7 +58,6 @@ def postorderRecursive(root, result):
 def preorderIterative(root, result):
     if not root:
         return
-
     stack = []
     stack.append(root)
     while stack:
@@ -71,7 +70,6 @@ def preorderIterative(root, result):
 def inorderIterative(root, result):
     if not root:
         return
-
     stack = []
     node = root
     while stack or node:
@@ -84,27 +82,24 @@ def inorderIterative(root, result):
             node = node.right
 
 # Post-order iterative traversal. The nodes' values are appended to the result list in traversal order
-def postorderIterative(root, result):
-    if not root:
-        return
-
+def postorderTraversal(root, result):
+    result = []
     visited = set()
     stack = []
-    node = root
-    while stack or node:
-        if node:
-            stack.append(node)
-            node = node.left
+    if root != None:
+        stack.append(root)
+    while len(stack)>0:
+        node = stack.pop()
+        if node in used:
+            result.append(node.val)
         else:
-            node = stack.pop()
-            if node.right and not node.right in visited:
-                stack.append(node)
-                node = node.right
-            else:
-                visited.add(node)
-                result.append(node.data)
-                node = None
-		
+            visited.add(node)
+            stack.append(node)
+            if node.right != None:
+                stack.append(node.right)
+            if node.left != None:
+                stack.append(node.left)
+
 def levelOrder (root):
 	Q = Queue()
 	if(root == None): 

@@ -8,30 +8,30 @@
 # 				   warranty; without even the implied warranty of 
 # 				    merchantability or fitness for a particular purpose. 
 
-def numberOfOnes1(n):
+def number_of_ones1(n):
 	count = 0
 	while(n):
-	     count += n & 1
-	     n >>= 1
+        count += n & 1
+	    n >>= 1
 	print count
 
-def numberOfOnes2(n):
+def number_of_ones2(n):
 	count = 0
 	while(n):
-	     if(n % 2 == 1):
-		  count += 1
-	     n = n / 2
+	    if(n % 2 == 1):
+		  	count += 1
+		  	n = n / 2
 	print count
 	
 
-def numberOfOnes3(n):
+def number_of_ones3(n):
 	count = 0
 	while(n):
 		count += 1
 		n &= n - 1
 	print count
 
-def numberOfOnes4(n):
+def number_of_ones4(n):
 	Table = [0, 1, 1, 2, 1, 2, 2, 3, 1, 2, 2, 3, 2, 3, 3, 4]
 	count = 0
 	while (n):
@@ -42,7 +42,7 @@ def numberOfOnes4(n):
 	
 
 n = 11
-numberOfOnes1(n)
-numberOfOnes2(n)
-numberOfOnes3(n)
-numberOfOnes4(n)
+number_of_ones1(n)
+number_of_ones2(n)
+number_of_ones3(n)
+number_of_ones4(n)

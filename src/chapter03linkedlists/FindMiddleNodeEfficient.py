@@ -13,16 +13,16 @@ class Node:
         self.data = data
         self.next = None
          
-    def setData(self, data):
+    def set_data(self, data):
         self.data = data
      
-    def getData(self):
+    def get_data(self):
         return self.data
      
-    def setNext(self, next):
+    def set_next(self, next):
         self.next = next
          
-    def getNext(self):
+    def get_next(self):
         return self.next
      
      
@@ -35,12 +35,12 @@ class LinkedList:
 		
     def reverseRecursive(self, n) :
 		if None != n:
-			right = n.getNext()
+			right = n.get_next()
 			if self.head != n:
-				n.setNext(self.head)
+				n.set_next(self.head)
 				self.head = n
 			else:
-				n.setNext(None)
+				n.set_next(None)
 			self.reverseRecursive(right)
 			
     def findMiddleNode(self) :
@@ -48,34 +48,34 @@ class LinkedList:
 	slowPtr = self.head
 	 
 	while (fastPtr != None):
-	    fastPtr = fastPtr.getNext()
+	    fastPtr = fastPtr.get_next()
 	    if (fastPtr == None):
 		return slowPtr
 	     
-	    fastPtr = fastPtr.getNext()   
-	    slowPtr = slowPtr.getNext()
+	    fastPtr = fastPtr.get_next()   
+	    slowPtr = slowPtr.get_next()
 	return slowPtr
 		
     def insertAtEnd(self, item):
         current = self.head
         if  current == None:
             node = Node(item)
-            node.setNext(None)
+            node.set_next(None)
             self.head = node
             return
             
-        while current.getNext() != None:
-            current = current.getNext()
+        while current.get_next() != None:
+            current = current.get_next()
              
         node = Node(item)
-        current.setNext(node)
+        current.set_next(node)
          
     def printList(self):
         current = self.head
          
         while current != None:
-            print current.getData()
-            current = current.getNext()
+            print current.get_data()
+            current = current.get_next()
              
 	
 
@@ -89,4 +89,4 @@ if __name__ == "__main__":
     linkedlst.printList()
     linkedlst.recursiveReverseList()
     linkedlst.printList()
-    print(linkedlst.findMiddleNode().getData())
+    print(linkedlst.findMiddleNode().get_data())

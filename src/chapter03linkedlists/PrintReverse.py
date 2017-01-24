@@ -13,16 +13,16 @@ class ListNode:
         self.data = value
         self.next = None
 
-    def getData(self):
+    def get_data(self):
         return self.data
 
-    def getNext(self):
+    def get_next(self):
         return self.next
 
-    def setData(self, value):
+    def set_data(self, value):
         self.data = value
 
-    def setNext(self, newnext):
+    def set_next(self, newnext):
         self.next = newnext
 	
 def ListLength(self):
@@ -30,7 +30,7 @@ def ListLength(self):
     count = 0
     while current != None:
         count = count + 1
-        current = current.getNext()
+        current = current.get_next()
 
     return count	
     

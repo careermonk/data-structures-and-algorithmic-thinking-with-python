@@ -9,16 +9,16 @@
 # 				    merchantability or fitness for a particular purpose. 
 
 
-def Function(n):
+def function(n):
 	count = 0
 	if n <= 0:
 		return
 	for i in range(1, n):
 		for j in range(1, n):
 			count = count + 1
-	Function(n - 3)
+	function(n - 3)
 	print (count)
 
-Function(20)
+function(20)
 
 

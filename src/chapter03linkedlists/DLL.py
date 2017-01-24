@@ -16,19 +16,19 @@ class Node:
         self.next = next
         self.prev = prev
     # method for setting the data field of the node    
-    def setData(self, data):
+    def set_data(self, data):
         self.data = data
     # method for getting the data field of the node   
-    def getData(self):
+    def get_data(self):
         return self.data
     # method for setting the next field of the node
-    def setNext(self, next):
+    def set_next(self, next):
         self.next = next
     # method for getting the next field of the node    
-    def getNext(self):
+    def get_next(self):
         return self.next
     # returns true if the node points to another node
-    def hasNext(self):
+    def has_next(self):
             return self.next != None
     # method for setting the next field of the node
     def setPrev(self, prev):
@@ -95,7 +95,7 @@ class DoubleLinkedList:
             self.head = self.tail = newNode
         else:
             newNode.setPrev(None)
-            newNode.setNext(self.head)
+            newNode.set_next(self.head)
             self.head.setPrev(newNode)
             self.head = newNode
 
@@ -105,8 +105,8 @@ class DoubleLinkedList:
         if currentNode == None:
             return None
         i = 0
-        while i < index and currentNode.getNext() is not None:
-            currentNode = currentNode.getNext()
+        while i < index and currentNode.get_next() is not None:
+            currentNode = currentNode.get_next()
             if currentNode == None:
                 break
             i += 1
@@ -118,13 +118,13 @@ class DoubleLinkedList:
             self.insertAtBeginning(data)
         elif index > 0:
             temp = self.getNode(index) 
-            if temp == None or temp.getNext() == None:	
+            if temp == None or temp.get_next() == None:	
                 self.insert(data)
             else:
-                newNode.setNext(temp.getNext())
+                newNode.set_next(temp.get_next())
                 newNode.setPrev(temp)
-                temp.getNext().setPrev(newNode)
-                temp.setNext(newNode)
+                temp.get_next().setPrev(newNode)
+                temp.set_next(newNode)
 		
     def find(self, data):
         current = self.head

@@ -8,7 +8,7 @@
 # 				   warranty; without even the implied warranty of 
 # 				    merchantability or fitness for a particular purpose. 
 
-def reverseNumber(n):
+def reverse_number(n):
 	nReverse = n
 	s = n.bit_length()
 	while(n):
@@ -21,4 +21,4 @@ def reverseNumber(n):
 
 n = 4
 print n
-reverseNumber(n)
+reverse_number(n)

@@ -45,6 +45,6 @@ class CamptureRegions:
             if row < len(board) - 1:
                 stack.append((row + 1) * nCols + col)
             if col > 0: 
-                 stack.append(row * nCols + col - 1)
+                stack.append(row * nCols + col - 1)
             if col < nCols - 1:
                 stack.append(row * nCols + col + 1)

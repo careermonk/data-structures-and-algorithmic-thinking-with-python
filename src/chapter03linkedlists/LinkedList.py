@@ -15,19 +15,19 @@ class Node:
         self.data = data
         self.next = None
          # method for setting the data field of the node    
-    def setData(self, data):
+    def set_data(self, data):
         self.data = data
     # method for getting the data field of the node   
-    def getData(self):
+    def get_data(self):
         return self.data
       # method for setting the next field of the node
-    def setNext(self, next):
+    def set_next(self, next):
         self.next = next
        # method for getting the next field of the node    
-    def getNext(self):
+    def get_next(self):
         return self.next
     # returns true if the node points to another node
-    def hasNext(self):
+    def has_next(self):
             return self.next != None
 
 # class for defining a linked list   
@@ -158,6 +158,10 @@ class LinkedList(object):
  
         if pos > self.length or pos < 0:
             print "The position does not exist. Please enter a valid position"
+        # to deletle the first position of the linkedlist
+        elif pos == 1:
+            self.delete_beg()
+            self.length -= 1
         else:        
             while currentnode.next != None or count < pos:
                 count = count + 1

@@ -9,12 +9,12 @@
 # 				    merchantability or fitness for a particular purpose. 
 
 
-def Function(n):
+def function(n):
 	if n <= 0:
 		return
 	for i in range(1, 3):  # This loop executes 3 times with recursive value of n/3  value
- 		Function(n / 3)
-Function(20)
+ 		function(n / 3)
+function(20)
 
 def Function2(n):
 	if n <= 0:

@@ -9,7 +9,7 @@
 # 				    merchantability or fitness for a particular purpose. 
 
 
-def Function(n):
+def function(n):
 	i = s = 1
 	while  s < n:
 		i = i + 1
@@ -17,7 +17,7 @@ def Function(n):
 		print("*")
 
 
-Function(20)
+function(20)
 
 def Function2(n):
 	i = 1

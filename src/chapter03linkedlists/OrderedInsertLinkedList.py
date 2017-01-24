@@ -13,16 +13,16 @@ def orderedInsert(self, item):
     previous = None
     stop = False
     while current != None and not stop:
-        if current.getData() > item:
+        if current.get_data() > item:
             stop = True
         else:
             previous = current
-            current = current.getNext()
+            current = current.get_next()
 
     temp = Node(item)
     if previous == None:
-        temp.setNext(self.head)
+        temp.set_next(self.head)
         self.head = temp
     else:
-        temp.setNext(current)
-        previous.setNext(temp)
+        temp.set_next(current)
+        previous.set_next(temp)

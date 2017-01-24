@@ -10,7 +10,7 @@
 
 
 count = 0
-def Function(n):
+def function(n):
 	global count
 	count = 1
 	if n <= 0:
@@ -18,10 +18,10 @@ def Function(n):
 	for i in range(1, n):
 		count = count + 1
 	n = n // 2;
-	Function(n)
+	function(n)
 	print count
 
-Function(200)
+function(200)
 
 def Function2(n):
 	if n <= 0:
@@ -31,4 +31,4 @@ def Function2(n):
 	Function2(n / 2)
 	print ("*")
 
-Function(20)
+function(20)

@@ -13,10 +13,10 @@ def trimBST(root, minVal, maxVal):
 		return 
 	root.setLeft(trimBST(root.getLeft(), minVal, maxVal)) 
 	root.setRight(trimBST(root.getRight(), minVal, maxVal)) 
-	if minVal <= root.getData() <= maxVal: 
+	if minVal <= root.get_data() <= maxVal: 
 		return root 
-	if root.getData() < minVal: 
+	if root.get_data() < minVal: 
 		return root.getRight() 
-	if root.getData() > maxVal: 
+	if root.get_data() > maxVal: 
 		return root.getLeft()
 		

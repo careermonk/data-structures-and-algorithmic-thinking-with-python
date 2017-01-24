@@ -8,12 +8,12 @@
 # 				   warranty; without even the implied warranty of 
 # 				    merchantability or fitness for a particular purpose. 
 
-def LinearSearchCOunt(A, data):
+def linear_search_count(A, data):
 	count = 0
- 	for i in range (0, len(A)): 
+	for i in range (0, len(A)): 
 		if(A[i] == data):
-		      count += 1
+			count += 1
 	return count
 
 A = [7, 3, 6, 3, 3, 6, 7	]
-print LinearSearchCOunt(A, 7)
+print linear_search_count(A, 7)
