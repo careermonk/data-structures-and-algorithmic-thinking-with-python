@@ -14,9 +14,9 @@ def rangePrinter(root, K1, K2):
 	if K1 <= root.get_data() <= K2: 
 		print(root.get_data())
 	if root.get_data() < K1: 
-		return rangePrinter(root.getRight()) 
+		return rangePrinter(root.getRight(), K1, K2) 
 	if root.get_data() > K2: 
-		return rangePrinter(root.getLeft())
+		return rangePrinter(root.getLeft(), K1, K2)
 
 
 import Queue
