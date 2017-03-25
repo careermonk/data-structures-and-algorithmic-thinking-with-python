@@ -31,3 +31,19 @@ def CountingSort(A, k):
 	
 A = [534, 246, 933, 127, 277, 321, 454, 565, 220]
 print(CountingSort(A, 1000))
+
+def counting_sort(A, k):
+    """in-place counting sort"""
+    n = len(A)
+    m = k + 1
+    C = [0] * m              
+    for a in A:
+        C[a] += 1           
+    i = 0
+    for a in range(m):            
+        for c in range(C[a]): 
+            A[i] = a
+            i += 1
+    return A
+
+print counting_sort( [1, 4, 7, 2, 1, 3, 2, 1, 4, 2, 3, 2, 1], 7 )
