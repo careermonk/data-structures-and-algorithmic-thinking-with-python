@@ -11,7 +11,6 @@ def peak_find_2d(matrix):
         if maxvalue <= matrix[row][j]:
             maxvalue = matrix[row][j]
             rowmax = row
-    print(rowmax, j, maxvalue)
 
     left, right = 0, 0
     if j > 0:
@@ -37,4 +36,5 @@ def generate_2d_array(n=7, m=7, lower=0, upper=9):
 if __name__ == '__main__':
     matrix = generate_2d_array(upper=9)
     pprint.pprint(matrix)
-    peak_find_2(matrix)
+    x = peak_find_2d(matrix)
+    pprint.pprint(x)
