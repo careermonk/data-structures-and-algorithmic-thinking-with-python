@@ -20,4 +20,4 @@ def LCS_length(X, Y):
         # Use key=len to select the maximum string in a list efficiently
         return max(LCS_length(X, n), LCS_length(m, Y))
 
-print "Longest common subsequence: ", LCS_length('ABCBDAB', 'BDCABA')
+print "Longest common subsequence length: ", LCS_length('ABCBDAB', 'BDCABA')
