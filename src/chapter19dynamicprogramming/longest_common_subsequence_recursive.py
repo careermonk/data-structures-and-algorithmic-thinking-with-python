@@ -1,10 +1,23 @@
-def LCS_length(X, Y, i, j):
-    if i == -1 or j == -1:
-        return 0
-    if X[i] == Y[j]:
-        return 1 + LCS_length(X, Y, i-1, j-1)
-    return max(LCS_length(X, Y, i-1, j), LCS_length(X, Y, i, j-1))
+def LCS(X, Y):
+    if not X or not Y:
+        return ""
+    x, m, y, n = X[0], X[1:], Y[0], Y[1:]
+    if x == y:
+        return x+LCS(m, n)
+    else:
+        # Use key=len to select the maximum string in a list efficiently
+        return max(LCS (X, n), LCS(m, Y), key=len)
 
-X = "ABCBDAB"
-Y = "BDCABA"
-print "Longest common subsequence: ", LCS_length(X, Y, len(X)-1, len(Y)-1)
+print "Longest common subsequence: ", LCS('ABCBDAB', 'BDCABA')
+
+def LCS_length(X, Y):
+    if not X or not Y:
+        return 0
+    x, m, y, n = X[0], X[1:], Y[0], Y[1:]
+    if x == y:
+        return 1+LCS_length(m, n)
+    else:
+        # Use key=len to select the maximum string in a list efficiently
+        return max(LCS_length(X, n), LCS_length(m, Y))
+
+print "Longest common subsequence: ", LCS_length('ABCBDAB', 'BDCABA')
