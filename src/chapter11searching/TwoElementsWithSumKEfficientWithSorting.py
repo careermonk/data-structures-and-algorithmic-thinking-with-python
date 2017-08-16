@@ -8,7 +8,7 @@
 # 				   warranty; without even the implied warranty of 
 # 				    merchantability or fitness for a particular purpose. 
 
-def twoElementsWithSumKBruteForce(A, K):
+def pair_sum_k_sorting(A, K):
     left = 0
     right = len(A) - 1; 
     while(left < right):
@@ -22,4 +22,4 @@ def twoElementsWithSumKBruteForce(A, K):
     
 A = [1, 4, 45, 6, 10, -8]
 A.sort()
-print twoElementsWithSumKBruteForce(A, 11)
+print pair_sum_k_sorting(A, 11)
