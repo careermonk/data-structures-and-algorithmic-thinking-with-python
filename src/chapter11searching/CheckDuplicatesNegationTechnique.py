@@ -15,7 +15,7 @@ def CheckDuplicatesNegationTechnique(A):
 			print("Duplicates exist:", A[i])
 			return
 		else:
-			A[A[i]] = -A[A[i]]
+			A[abs(A[i])] *= -1
 			
 	print("No duplicates in given array.")
 
