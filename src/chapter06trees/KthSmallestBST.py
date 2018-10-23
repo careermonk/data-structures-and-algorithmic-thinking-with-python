@@ -90,7 +90,7 @@ count = 0
 def kthSmallestInBST(root, k):
 	global count
 	if(not root): 
-		return None;
+		return None
 	left = kthSmallestInBST(root.left, k)
 	if(left): 
 		return left
