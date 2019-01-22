@@ -16,7 +16,7 @@ def InterpolationSearch(numbersList, value):
                / (numbersList[high] - numbersList[low]))
         if numbersList[mid] < value:
             low = mid + 1
-        elif numbersList[mid] < value:
+        elif numbersList[mid] > value:
             high = mid - 1
         else:
             return mid
