@@ -48,9 +48,8 @@ class Graph:
     def getVertex(self, n):
         for vertxin in range(0, self.numVertices):
 		if n == self.vertices[vertxin].getVertexID():
-			return vertxin
-        else:
-            return -1
+			return vertxin       
+        return -1
 
     def addEdge(self, frm, to, cost=0): 
         if self.getVertex(frm) != -1 and self.getVertex(to) != -1:
