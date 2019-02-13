@@ -3,7 +3,7 @@
 # Creation Date    		: 2014-01-10 06:15:46 
 # Last modification		: 2008-10-31 
 #               by		: Narasimha Karumanchi 
-# Book Title			: Data Structures And Algorithms Made In Java
+# Book Title			: Data Structures And Algorithms Thinking In Python
 # Warranty         		: This software is provided "as is" without any 
 # 				   warranty; without even the implied warranty of 
 # 				    merchantability or fitness for a particular purpose. 
@@ -71,24 +71,30 @@ class LinkedList(object):
                  
     # method to add a node at a particular position
     def addAtPos(self, pos, node):
-        count = 0
-        currentnode = self.head
-        previousnode = self.head
-         
-        if pos > self.length or pos < 0:
-            print "The position does not exist. Please enter a valid position"
+
+        if pos >= (self.length + 1) or pos < 0: #is total length is 4 , new pos could be 0 to 3 and 4 to add new element, if pos is > 4 i.e 5 onwards  print fail condition, and pos cannot be -ve
+            print("enter valid position, length of ll is ",self.length)
         else:
-            while currentnode.next != None or count < pos:
-                count = count + 1
-                if count == pos:
-                    previousnode.next = node
-                    node.next = currentnode
-                    self.length += 1
-                    return
-                     
-                else:
-                    previousnode = currentnode
-                    currentnode = currentnode.next
+            print('entered position is valid')
+            if pos == 0: #even is one ele in ll, it has pos 0 and 1 to add new ele at pos beginning(0) and add at end(1)
+                self.add_at_beg(node)
+            elif pos == self.length:
+                self.add_at_end(node)
+            else:
+                print('have to add in middle')
+                current_node = self.head
+                print("type of current_node",type(current_node.))
+                print("type of node passed",type(node))
+                previous_node = self.head
+                count = 0 #increment current pointer till previous node to inserting node
+                while count < pos-1 : #traverse to get one node previous's info in current_node
+                    current_node = current_node.next  #current_node.get_next() will not work , type mis match
+                    count = count + 1
+
+                node.next = current_node.next #node.set_next(current_node.next) - woeks
+                current_node.next = node
+
+                self.length += 1
          
          
                  
