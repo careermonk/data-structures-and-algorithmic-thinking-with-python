@@ -9,6 +9,7 @@
 # 				    merchantability or fitness for a particular purpose. 
 
 def LongestIncreasingSequence(numList):
+    n = len(numList) 
     LISTable = [1]
     for i in range(1, len(numList))):
         LISTable.append(1)
