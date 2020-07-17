@@ -14,8 +14,8 @@ class Solution(object):
         current = head
         result = 0
         while current:
-            if (current.val in s and
-                    getattr(current.next, 'val', None) not in s):
+            if (current.data in s and
+                    getattr(current.next, 'data', None) not in s):
                 ans += 1
             current = current.next
 
