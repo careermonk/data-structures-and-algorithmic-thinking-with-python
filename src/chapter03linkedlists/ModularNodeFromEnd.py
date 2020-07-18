@@ -78,8 +78,6 @@ class LinkedList:
 
 if __name__ == "__main__":
     linkedlst = LinkedList()
-    linkedlst.insertAtEnd(1)
-    linkedlst.insertAtEnd(2)
-    linkedlst.insertAtEnd(3)
-    linkedlst.insertAtEnd(4)
+    for i in range(1,5):
+	linkedlst.insert(i)
     linkedlst.modular_node_from_end(4)
