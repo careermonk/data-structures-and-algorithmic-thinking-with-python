@@ -17,6 +17,7 @@ class MaxKFromGrid:
     def __init__(self, grid):
         self.grid = grid
     
+    # TC: O(mlogm); SC: O(m) where m is the number of rows
     def findSmallestK(self, K):
         if K<=0 or not self.grid:
             return []
