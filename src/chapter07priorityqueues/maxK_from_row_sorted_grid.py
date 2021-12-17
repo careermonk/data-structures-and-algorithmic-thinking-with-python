@@ -13,7 +13,7 @@ from queue import PriorityQueue
 
 # Find smallest K elements from row-wise sorted grid
 
-class MaxKFromGrid:
+class MinKFromGrid:
     def __init__(self, grid):
         self.grid = grid
     
@@ -47,5 +47,5 @@ grid =[[0,2,5,7,9],
      [-5,6,8,9,11],
      [4,5,10,13,16],
      [-4,0,5,8,19]]
-obj = MaxKFromGrid(grid)
+obj = MinKFromGrid(grid)
 print(obj.findSmallestK(15))
