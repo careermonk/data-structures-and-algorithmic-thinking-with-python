@@ -86,14 +86,15 @@ class Graph:
     def getPrevious(self, current):
         return self.previous
 	
-    def getEdges(self):
+    def get_edges(self):
         edges = []
-	for v in G:
-		for w in v.getConnections():
-		    vid = v.getVertexID()
-		    wid = w.getVertexID()
-		    edges.append((vid, wid, v.getWeight(w)))
-	return edges
+        for k,v in self.vertDictionary.items():
+            for w in v.get_connections():
+                vid = v.get_vertex_ID()
+                wid = w.get_vertex_ID()
+                edges.append([vid,wid,v.get_weight(w)])
+
+        return edges
     
 if __name__ == '__main__':
 
