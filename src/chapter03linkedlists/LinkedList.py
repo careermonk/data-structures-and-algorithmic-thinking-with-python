@@ -135,10 +135,14 @@ class LinkedList(object):
     def deleteValue(self, data):
         currentnode = self.head
         previousnode = self.head
-         
-        while currentnode.next != None or currentnode.data != data:
+        while currentnode.next != None:# or currentnode.data != data:
+            
             if currentnode.data == data:
-                previousnode.next = currentnode.next
+                
+                if self.head.data==data:
+                    self.head=previousnode.next = currentnode.next
+                else:
+                    previousnode.next = currentnode.next
                 self.length -= 1
                 return
                     
